@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Black Friday Deal Finder 2026 — Real Deals, Verified Prices</title>
+<meta name="description" content="24 real Black Friday / Cyber Monday 2026 deals, checked by hand on 27 November 2026, with an honest verdict on whether each discount is actually a deal.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero">
+  <p class="eyebrow">Black Friday 2026 &middot; Cyber Monday Nov 30</p>
+  <h1>Black Friday Deal Finder</h1>
+  <p class="lede">24 real deals, checked by hand — not scraped, not sponsored. Every
+  card shows the sale price, the regular price, the store, and an honest
+  verdict on whether the discount is actually a deal.</p>
+  <p class="freshness" id="freshness">Prices checked Fri 27 Nov 2026, 14:07&ndash;14:20 WIB
+  (live store pages + deal reports). Prices move fast — always confirm on the
+  store page before you pay.</p>
+  <dl class="stats" id="stats">
+    <div><dt>Deals listed</dt><dd id="stat-deals">&ndash;</dd></div>
+    <div><dt>Combined saving</dt><dd id="stat-saving">&ndash;</dd></div>
+    <div><dt>Real deals</dt><dd id="stat-real">&ndash;</dd></div>
+    <div><dt>Stores</dt><dd id="stat-stores">&ndash;</dd></div>
+  </dl>
+</header>
+
+<main>
+  <section class="controls" aria-label="Find a deal">
+    <label class="search">
+      <span class="visually-hidden">Search deals</span>
+      <input id="search" type="search" placeholder="Search a product or brand — try “OLED”, “AirPods”, “Dyson”…" autocomplete="off">
+    </label>
+    <div class="control-row">
+      <label>Category
+        <select id="category">
+          <option value="">All categories</option>
+        </select>
+      </label>
+      <label>Store
+        <select id="store">
+          <option value="">All stores</option>
+        </select>
+      </label>
+      <label>Minimum discount
+        <select id="min-discount">
+          <option value="0">Any discount</option>
+          <option value="20">20% off or more</option>
+          <option value="30">30% off or more</option>
+          <option value="40">40% off or more</option>
+          <option value="50">50% off or more</option>
+        </select>
+      </label>
+      <label>Sort by
+        <select id="sort">
+          <option value="pct-desc">Biggest % off first</option>
+          <option value="saved-desc">Biggest $ saving first</option>
+          <option value="price-asc">Lowest price first</option>
+          <option value="price-desc">Highest price first</option>
+          <option value="name-asc">Name A&ndash;Z</option>
+        </select>
+      </label>
+      <label class="check">
+        <input id="real-only" type="checkbox">
+        Real deals only (&ge;40% off)
+      </label>
+    </div>
+    <p class="result-count" id="result-count" aria-live="polite"></p>
+  </section>
+
+  <section class="grid" id="deal-grid" aria-live="polite"></section>
+  <p class="empty" id="empty" hidden>No deals match those filters. Try clearing the
+  search or lowering the minimum discount.</p>
+
+  <section class="explain">
+    <h2>Is it really a deal? How the verdict works</h2>
+    <p>A big red “was” price is not proof of a bargain. Some stores show a
+    “comparable value” that the item never actually sold at, and some
+    “discounts” are a few dollars on a bundle you would buy anyway. So every
+    deal here is scored from its numbers, the same way for all 24:</p>
+    <ul class="verdicts">
+      <li><strong class="badge real">Real deal</strong> — 40% off or more. The
+      sale price is the story, not the sticker.</li>
+      <li><strong class="badge fair">Fair deal</strong> — 15% to 39% off. A
+      genuine saving, but not a once-a-year price.</li>
+      <li><strong class="badge thin">Thin deal</strong> — under 15% off. Only
+      worth it if you already wanted exactly this item.</li>
+    </ul>
+    <p>Where the “was” price is the store’s own reference number rather than a
+    price the item was seen selling at, the card says so — the percentage is
+    still shown, but the verdict is honest about what it rests on.</p>
+
+    <h2>How the prices were checked</h2>
+    <ul>
+      <li><strong>Live store pages, 27 Nov 2026 14:07 WIB:</strong> the Target
+      and Best Buy homepages were read the same morning — AirPods Pro 3,
+      Ring Doorbell 2K, Switch 2 bundle, iPad A16, DualSense, Beats Solo 4,
+      Dyson V9 and Keurig at Target; Insignia QLED and TCL QM8CG at Best
+      Buy.</li>
+      <li><strong>Deal reports, 9&ndash;25 Nov 2026:</strong> the rest were
+      taken from reports that name the store and the exact price, then
+      re-confirmed by a fresh search on 27 Nov 2026 before they were listed
+      here. Each card names its source.</li>
+      <li><strong>Sale windows:</strong> Amazon runs to Nov 30, Best Buy to
+      Nov 28, Target and Walmart to Nov 29, Cyber Monday Nov 30. A few items
+      run longer (Switch 2 bundle to Dec 5, DualSense to Dec 7) — the card
+      shows its own end date.</li>
+      <li><strong>What this is not:</strong> prices change hourly in Black
+      Friday week and stock runs out. Treat every price as “seen at this time”,
+      and check the store page before paying. Apple’s own event (Nov 27&ndash;30)
+      gives gift cards, not price cuts — that is why no Apple Store deal is
+      listed.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>Black Friday Deal Finder — 24 deals, 4 stores, 7 categories. Static site:
+  no network requests, no tracking, no build step. Data: <code>app/deals.js</code>.
+  Entry for the make.fun bounty <strong>black-friday-deal-finder-01</strong>.</p>
+</footer>
+
+<script src="deals.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
